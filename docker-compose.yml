@@ -1,0 +1,11 @@
+services:
+  transfermarkt-api:
+    build: ../transfermarkt-api
+    ports:
+      - "5000:8000"
+    networks:
+      - transfermarket-network
+
+networks:
+  transfermarket-network:
+    driver: bridge
