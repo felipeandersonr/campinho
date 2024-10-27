@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from loguru import logger
 
 
 class TransfermarktController:
@@ -46,6 +47,8 @@ class TransfermarktController:
                 "transfermarkt_club_url": detailed_club_url
             }
 
+            logger.info(f"get infos by {club_info['name']} -- {club_info['transfermarkt_club_url']}")
+
             clubs.append(club_info)
 
         return clubs
@@ -80,6 +83,8 @@ class TransfermarktController:
                 "image": player_image,
                 "shirt_number": player_number
             }
+
+            logger.info(f"gets info by: {player_info['name']} -- {club_transfermarkt_url}")
 
             players.append(player_info)
 
