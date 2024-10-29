@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from loguru import logger
 
 from lineup_team.models import Club
@@ -27,3 +28,22 @@ class ClubController:
         logger.info(f"created club {club_data['name']} -- {club_transfermarkt_url}")
 
         return new_club
+
+    @classmethod
+    def get_clubs(cls, request) -> JsonResponse:
+        clubs = ClubQueries().get_clubs()
+
+        data = [
+            {
+                "id": club.id,
+                "name": club.name,
+                "image": club.transfermarkt_image_url,
+                "transfermarkt_url": club.transfermarkt_url
+            }
+
+            for club in clubs
+        ]
+
+        response = JsonResponse(data=data, safe=False)
+
+        return response

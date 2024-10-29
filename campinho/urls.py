@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from lineup_team.services import player, club
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("clubs/", club.get_clubs, name="clubs"),
+    path("lineup/<int:club_id>", player.lineup, name="lineup_club")
 ]

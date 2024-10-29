@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from loguru import logger
 
 from lineup_team.models import Player, Club
@@ -22,3 +23,22 @@ class PlayerController:
         logger.info(f"created player {new_player.name} - {new_player.transfermarkt_url}")
 
         return new_player
+
+    @classmethod
+    def get_players_by_club_id(cls, request, club_id: int) -> JsonResponse:
+        players = PlayerQueries().get_players_by_club_id(
+            club_id=club_id
+        )
+
+        data = [
+            {
+                "name": player.name,
+                "shirt_number": player.shirt_number,
+            }
+
+            for player in players
+        ]
+
+        response = JsonResponse(data=data, safe=False)
+
+        return response

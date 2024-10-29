@@ -7,3 +7,9 @@ class ClubQueries:
         exists_club = Club.objects.filter(transfermarkt_url=club_transfermarkt_url).exists()
 
         return exists_club
+
+    @staticmethod
+    def get_clubs():
+        clubs = Club.objects.all()
+
+        return clubs
