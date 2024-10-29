@@ -14,6 +14,8 @@ class ClubController:
         )
 
         if exists_club:
+            logger.error(f"already exists club {club_data['name']}")
+
             return None
 
         new_club = Club.objects.create(

@@ -7,7 +7,9 @@ class Club(models.Model):
     transfermarkt_url = models.CharField(max_length=255, unique=True)
 
 
-# class Player(models.Model):
-#     name = models.CharField(max_length=255)
-#     shirt_number = models.IntegerField()
-#     transfermarkt_url = models.CharField(max_length=255)
+class Player(models.Model):
+    name = models.CharField(max_length=255)
+    shirt_number = models.CharField(max_length=4)
+    transfermarkt_url = models.CharField(max_length=255)
+
+    club = models.ForeignKey(Club, on_delete=models.CASCADE, related_name="players")

@@ -78,10 +78,14 @@ class TransfermarktController:
             player_image = player_image_tag.attrs["data-src"]
             player_name = player_content.find("a").text.strip()
 
+            player_url = player_content.find("a").attrs["href"]
+            player_url = self.base_transfermarkt_url + player_url
+
             player_info = {
                 "name": player_name,
                 "image": player_image,
-                "shirt_number": player_number
+                "shirt_number": player_number,
+                "transfermarkt_url": player_url
             }
 
             logger.info(f"gets info by: {player_info['name']} -- {club_transfermarkt_url}")
