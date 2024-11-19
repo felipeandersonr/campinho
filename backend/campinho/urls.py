@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lineup_team.services import player, club
+from backend.lineup_team.services import club, player
 
 urlpatterns = [
     path('admin/', admin.site.urls),

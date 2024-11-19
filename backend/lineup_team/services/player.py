@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 
-from lineup_team.controllers.player import PlayerController
+from backend.lineup_team.controllers.player import PlayerController
 
 
 def lineup(request, club_id: int) -> JsonResponse:

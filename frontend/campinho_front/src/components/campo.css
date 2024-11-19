@@ -1,0 +1,80 @@
+.field {
+    position: relative;
+    width: 600px;
+    height: 90vh;
+    background-color: #006400;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 20px auto;
+  }
+  
+  .center-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .center-dot {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .center-line {
+    position: absolute;
+  width: 100%; /* Linha ocupa toda a largura do campo */
+  height: 2px; /* Espessura da linha */
+  background-color: white; /* Cor da linha */
+  top: 50%; /* Posiciona no centro vertical do campo */
+  left: 0; /* Inicia no lado esquerdo */
+  transform: translateY(-50%);
+  }
+  
+  .goal-area {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    border: 2px solid white;
+  }
+  
+  .goal-area.top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .goal-area.bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .penalty-area {
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    border: 2px solid white;
+  }
+  
+  .penalty-area.top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .penalty-area.bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
