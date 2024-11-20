@@ -1,5 +1,6 @@
-import Campo from "../components/campo";
-import Jogador from "../components/jogador";
+import SoccerPitch from "../components/soccer_pitch";
+import Player from "../components/player";
+import PlayerBench from "../components/player_bench";
 
 import "./globals.css";
 
@@ -9,9 +10,9 @@ export default function Home() {
     <h1>Nome e escudo do time que busquei os jogadores</h1>
 
     <div className="content">
-      <Jogador shirt_number="10" player_name="Rodrigo Garro"></Jogador>
+      <PlayerBench />
 
-      <Campo />
+      <SoccerPitch />
     </div>
   </div>
 

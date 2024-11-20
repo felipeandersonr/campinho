@@ -1,7 +1,7 @@
 import React from "react";
-import "./campo.css";
+import "./soccer_pitch.css";
 
-const Campo = () => {
+const SoccerPitch = () => {
   return (
     <div className="field">
         <div className="center-line"></div>
@@ -17,4 +17,4 @@ const Campo = () => {
   );
 };
 
-export default Campo;
+export default SoccerPitch;

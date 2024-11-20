@@ -32,12 +32,12 @@
 
   .center-line {
     position: absolute;
-  width: 100%; /* Linha ocupa toda a largura do campo */
-  height: 2px; /* Espessura da linha */
-  background-color: white; /* Cor da linha */
-  top: 50%; /* Posiciona no centro vertical do campo */
-  left: 0; /* Inicia no lado esquerdo */
-  transform: translateY(-50%);
+    width: 100%; /* Linha ocupa toda a largura do campo */
+    height: 2px; /* Espessura da linha */
+    background-color: white; /* Cor da linha */
+    top: 50%; /* Posiciona no centro vertical do campo */
+    left: 0; /* Inicia no lado esquerdo */
+    transform: translateY(-50%);
   }
   
   .goal-area {
