@@ -1,8 +1,8 @@
 from django.http import JsonResponse
 from loguru import logger
 
-from backend.lineup_team.models import Player, Club
-from backend.lineup_team.queries.player import PlayerQueries
+from lineup_team.models import Player, Club
+from lineup_team.queries.player import PlayerQueries
 
 
 class PlayerController:

@@ -1,4 +1,4 @@
-from backend.lineup_team.models import Club
+from lineup_team.models import Club
 
 
 class ClubQueries:

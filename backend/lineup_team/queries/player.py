@@ -1,4 +1,4 @@
-from backend.lineup_team.models import Player
+from lineup_team.models import Player
 
 
 class PlayerQueries:

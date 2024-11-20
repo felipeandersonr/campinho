@@ -6,11 +6,11 @@ django.setup()
 
 from loguru import logger
 
-from backend.lineup_team.controllers.club import ClubController
-from backend.lineup_team.controllers.transfermarkt import TransfermarktController
-from backend.lineup_team.controllers.player import PlayerController
+from lineup_team.controllers.club import ClubController
+from lineup_team.controllers.transfermarkt import TransfermarktController
+from lineup_team.controllers.player import PlayerController
 
-from backend.lineup_team.models import Club
+from lineup_team.models import Club
 
 
 def load_clubs(data_clubs: list[dict]):
